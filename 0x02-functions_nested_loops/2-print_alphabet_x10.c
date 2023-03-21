@@ -17,5 +17,4 @@ void print_alpahbet_10x(void)
 		}
 		_putchar('\n');
 	}
-	return (0);
 }
