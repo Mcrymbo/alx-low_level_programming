@@ -3,13 +3,11 @@
 /**
  * _abs - computes absolute value of a number
  *
- * @int: accepts an integer
+ * @n: accepts an integer
  * Return: positive number for success
  */
-int _abs(int)
+int _abs(int n)
 {
-	int n;
-
 	if (n > 0)
 	{
 		return (n);
