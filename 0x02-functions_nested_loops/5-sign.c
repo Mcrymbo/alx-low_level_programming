@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * print_sign - prints + for positive number and - for 
+ * print_sign - prints + for positive number and - for
  * negative numbers
+ *
+ * @n: number to be checke
  *
  * Return: 1 for success and 0 otherwise
  */
@@ -13,7 +15,7 @@ int print_sign(int n)
 		_putchar(43);
 		return (1);
 	}
-	else if (n = 0)
+	else if (n == 0)
 	{
 		_putchar(48);
 		return (0);
