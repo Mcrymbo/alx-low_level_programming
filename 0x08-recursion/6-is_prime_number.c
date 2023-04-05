@@ -3,6 +3,7 @@
 /**
  * primo - checking for prime number
  * @i: some value
+ * @n: number
  * Return: 1 for prime number and 0 otherwise
  */
 int primo(int n, int i)
