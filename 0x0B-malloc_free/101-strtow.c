@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_grid - frees 2-d array
+ * n_free_grid - frees 2-d array
  * @grid: 2-d array
  * @height: height of the array
  * Return: no return
