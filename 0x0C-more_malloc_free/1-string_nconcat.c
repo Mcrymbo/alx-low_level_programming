@@ -6,6 +6,7 @@
  * string_nconcat - concatenates two strings
  * @s1: memory for fist string
  * @s2: memory for second string
+ * @n: number of array to condider in s2
  * Return: concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
