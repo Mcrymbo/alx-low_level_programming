@@ -88,13 +88,12 @@ int main(int argc, char *argv[])
 	n1 = leng(argv, 1), n2 = leng(argv, 2), _isn_zero(argv),
 	   it = n1 + n2, s = malloc(it + 1);
 	if (s == NULL)
-	{
 		printf("Error\n"), exit(98);
-	}
 	s = memory_set(s, it), i = n1 - 1, j = n2 - 1, k = it - 1, sum2 = ca = 0;
 	for (; k >= 0; k--, i--)
 	{
 		if (i < 0)
+		{
 			if (sum2 > 0)
 			{
 				sum1 = (*(s + k) - '0') + sum2;
@@ -103,6 +102,7 @@ int main(int argc, char *argv[])
 				*(s + k) = (sum1 % 10) + '0';
 			}
 			i = n1 - 1, j--, sum2 = 0, ca++, k = it - (1 + ca);
+		}
 		if (j < 0)
 		{
 			if (s[0] != '0')
