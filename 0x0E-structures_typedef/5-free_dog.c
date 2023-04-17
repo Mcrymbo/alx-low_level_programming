@@ -3,6 +3,7 @@
 
 /**
  * free_dog -frees dog
+ * @d: structure dog
  * Return: no return
  */
 void free_dog(dog_t *d)
