@@ -29,7 +29,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ptr->owner = malloc(io + 1);
 	if (!(ptr->name) || !(ptr->owner))
 	{
-		free(ptr->name),free(ptr->owner),free(ptr);
+		free(ptr->name), free(ptr->owner), free(ptr);
 		return (NULL);
 	}
 	for (i = 0; i < in; i++)
