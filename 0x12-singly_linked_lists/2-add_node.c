@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * add_nodes - adds new nodes at beggining
- * @h: linked list
+ * add_node - adds new nodes at beggining
+ * @head: start of the linked list
  * @str: string that stores list
  * Return: adderess of new node at beggining of list
  */
@@ -15,7 +15,8 @@ list_t *add_node(list_t **head, const char *str)
 	if (new == NULL)
 		return (NULL);
 	new->str = strdup(str);
-	for (n_char = 0; str[n_char]; n_char++);
+	for (n_char = 0; str[n_char]; n_char++)
+		;
 	new->len = n_char;
 	new->next = *head;
 	*head = new;
