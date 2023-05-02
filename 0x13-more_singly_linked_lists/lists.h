@@ -32,4 +32,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *reverse_listint(listint_t **head);
 
+/**
+ * struct listint_v - singly liinked list to a void
+ * @prt: points to current node
+ * @next: points to next node
+ * Return: no return
+ */
+typedef struct listint_v
+{
+	void *ptr;
+	struct listint_v *next;
+} listint_v;
+size_t print_listint_safe(const listint_t *head);
+
 #endif
