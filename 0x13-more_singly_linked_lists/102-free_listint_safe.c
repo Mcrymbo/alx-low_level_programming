@@ -15,7 +15,7 @@ size_t free_listint_safe(listint_t **h)
 	{
 		new = malloc(sizeof(listint_v));
 		if (new == NULL)
-			exit (98);
+			exit(98);
 		new->ptr = (void *)*h;
 		new->next = curr;
 		curr = new;
