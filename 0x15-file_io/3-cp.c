@@ -28,7 +28,7 @@ void check_error(int file_from, int file_to, char *av[])
  */
 int main(int ac, char *av[])
 {
-	ssize_t ch = 1024, wt;
+	ssize_t ch, wt;
 	int file_from, file_to, error;
 	char str[1024];
 
@@ -40,12 +40,13 @@ int main(int ac, char *av[])
 	file_from = open(av[1], O_RDONLY);
 	file_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	check_error(file_from, file_to, av);
+	ch = 1024;
 	while (ch == 1024)
 	{
 		ch = read(file_from, str, 1024);
-		wt = write(file_to, str, ch);
 		if (ch == -1)
 			check_error(-1, 0, av);
+		wt = write(file_to, str, ch);
 		if (wt == -1)
 			check_error(0, -1, av);
 	}
