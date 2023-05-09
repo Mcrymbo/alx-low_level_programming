@@ -30,11 +30,11 @@ int main(int ac, char *av[])
 {
 	ssize_t ch, wt;
 	int file_from, file_to, error;
-	char str[1024];
+	char buf[1024];
 
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_from");
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
 	file_from = open(av[1], O_RDONLY);
@@ -43,24 +43,23 @@ int main(int ac, char *av[])
 	ch = 1024;
 	while (ch == 1024)
 	{
-		ch = read(file_from, str, 1024);
+		ch = read(file_from, buf, 1024);
 		if (ch == -1)
 			check_error(-1, 0, av);
-		wt = write(file_to, str, ch);
+		wt = write(file_to, buf, ch);
 		if (wt == -1)
 			check_error(0, -1, av);
 	}
 	error = close(file_from);
 	if (error == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 	error = close(file_to);
 	if (error == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
-
 		exit(100);
 	}
 	return (0);
