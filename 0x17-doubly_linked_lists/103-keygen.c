@@ -27,6 +27,7 @@ int bigs(char *usrn, int n)
 }
 /**
  * muls - multiplies each character of username
+ * @usrn: username
  * @n: length of username
  * Return: chars muplied
  */
