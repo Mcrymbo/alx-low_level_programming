@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * delete_dnoteint_at_index - deletes  a node at index
+ * delete_dnodeint_at_index - deletes  a node at index
  * @head: head pointer
  * @index: index location of the node
  * Return: 1 if deleted and -1 otherwise
@@ -15,7 +15,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		while (curr->prev != NULL)
 			curr = curr->prev;
 	while (curr != NULL)
-	{		
+	{
 		if (count == index)
 		{
 			if (count == 0)
